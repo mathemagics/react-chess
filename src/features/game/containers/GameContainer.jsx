@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { func } from 'prop-types';
 import { map } from 'react-immutable-proptypes';
 
+import { Board } from 'Game/components/Board';
+
 import { updateBoard } from 'Ducks/GameDuck';
 
 const mapStateToProps = state => ({ board: state.getIn(['game', 'board']) });
@@ -18,9 +20,8 @@ export class GameContainer extends PureComponent {
   }
 
   render() {
-    console.log(this.props.board);
     return (
-      <div>game container</div>
+      <Board board={this.props.board} />
     );
   }
 }

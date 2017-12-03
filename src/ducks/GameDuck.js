@@ -1,9 +1,9 @@
-import { Map, List } from 'immutable';
+import { Map, OrderedMap, List } from 'immutable';
 
 const emptyRow = List([null, null, null, null, null, null, null, null]);
 
 const INITIAL_STATE = Map({
-  board: Map({
+  board: OrderedMap({
     a: emptyRow,
     b: emptyRow,
     c: emptyRow,
