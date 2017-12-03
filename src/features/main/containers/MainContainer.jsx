@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { string, func } from 'prop-types';
 
 import { loadMainContent } from 'Ducks/MainDuck';
-import GameContainer from 'Features/game/containers/GameContainer';
+import { GameContainer } from 'Features/game/containers/GameContainer';
 
 import { MainComponent } from '../components/MainComponent';
 
