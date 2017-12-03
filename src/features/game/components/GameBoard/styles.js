@@ -7,6 +7,12 @@ export const Square = styled.div`
   height: 40px;
 `;
 
-export const Row = styled.div`
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
+export const Board = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
