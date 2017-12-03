@@ -19,9 +19,13 @@ export class GameContainer extends PureComponent {
     this.props.updateBoard();
   }
 
+  handleSquareClick = (column, row) => {
+    console.log(`clicking square ${column}${row + 1}`);
+  }
+
   render() {
     return (
-      <GameBoard board={this.props.board} />
+      <GameBoard board={this.props.board} onClick={this.handleSquareClick} />
     );
   }
 }
