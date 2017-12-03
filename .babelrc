@@ -1,0 +1,16 @@
+{
+  "presets": ["env", "stage-0", "react"],
+    "plugins": [
+      ["module-resolver", {
+        "root": ["/"],
+        "alias": {
+          "Features": "./src/features",
+          "Ducks": "./src/ducks"
+        }
+      }],
+      ["transform-decorators-legacy"],
+      ["transform-react-jsx", {
+        "pragma": "createElement" // default pragma is React.createElement
+      }]
+    ]
+}
