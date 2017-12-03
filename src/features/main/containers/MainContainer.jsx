@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { string, func } from 'prop-types';
 
 import { loadMainContent } from 'Ducks/MainDuck';
+import GameContainer from 'Features/game/containers/GameContainer';
+
 import { MainComponent } from '../components/MainComponent';
 
 const mapStateToProps = state => ({ mainContent: state.getIn(['main', 'mainContent']) });
@@ -20,7 +22,10 @@ export class MainContainer extends PureComponent {
   render() {
     const { mainContent } = this.props;
     return (
-      <MainComponent content={mainContent} />
+      <div>
+        <MainComponent content={mainContent} />
+        <GameContainer />
+      </div>
     );
   }
 }

@@ -22,7 +22,7 @@ module.exports = {
     rules: [
       {
         use: 'babel-loader',
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
       },
       {
@@ -43,6 +43,9 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new CleanWebpackPlugin([paths.appBuild], { root: paths.projectRoot }),
