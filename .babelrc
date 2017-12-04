@@ -6,7 +6,8 @@
         "alias": {
           "Features": "./src/features",
           "Ducks": "./src/ducks",
-          "Game": "./src/features/game"
+          "Game": "./src/features/game",
+          "Chess": "./src/chess"
         }
       }],
       ["transform-decorators-legacy"],
