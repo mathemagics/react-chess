@@ -16,6 +16,7 @@ const INITIAL_STATE = Map({
     h: emptyColumn,
   }),
   selected: Map({ column: null, row: null }),
+  highlighted: List(),
 });
 
 const INITIALIZE_BOARD = 'INITIALIZE_BOARD';
@@ -51,9 +52,9 @@ export const gameReducer = (state = INITIAL_STATE, action) => {
 
 export const getHighlighted = (state) => {
   console.log('state', state);
-  const column = state.getIn(['game', 'selected', 'column']);
-  const row = state.getIn(['game', 'selected', 'row']);
-  const board = state.get('game', 'board');
+  const column = state.getIn(['selected', 'column']);
+  const row = state.getIn(['selected', 'row']);
+  const board = state.get('board');
   console.log('row', row, 'column', column);
   console.log(column && (row || row === 0));
   return (column && (row || row === 0)) ? Chess.getMoves(board, column, row) : List();

@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
+const backgroundColor = (props) => {
+  if (props.highlight) {
+    return 'green';
+  } else if (props.selected) {
+    return 'red';
+  }
+  return props.black ? 'black' : 'white';
+};
+
 export const Square = styled.div`
   display: inline-block;
-  background-color: ${
-  (props) => {
-    if (props.highlight) {
-      return 'green';
-    }
-    return props.black ? 'black' : 'white';
-  }}
+  background-color: ${backgroundColor};
   width: 40px;
   height: 40px;
 `;

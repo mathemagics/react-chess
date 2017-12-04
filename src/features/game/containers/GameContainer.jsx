@@ -10,7 +10,7 @@ import { clickBoard, initializeBoard, getHighlighted } from 'Ducks/GameDuck';
 const mapStateToProps = state => ({
   board: state.getIn(['game', 'board']),
   selected: state.getIn(['game', 'selected']),
-  highlighted: getHighlighted(state),
+  highlighted: getHighlighted(state.get('game')),
 });
 
 @connect(mapStateToProps, { initializeBoard, clickBoard })

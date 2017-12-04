@@ -20,8 +20,11 @@ export const Chess = {
     const valid = piece && piece.move(board, fromCol, fromRow, toCol, toRow);
   },
   getMoves: (board, column, row) => {
-    console.log('here')
-    const { type, color } = board.getIn([column, row]);
+    console.log('here', board);
+    console.log('column', column);
+    console.log('row', row);
+    return List();
+    // const { type, color } = board.getIn([column, row]);
   },
   checkCheck: (board) => {
     console.log(board);
